@@ -29,7 +29,7 @@ Work coords: (37.331996999999994, -122.02961100000002) 1 Infinite Loop
 The raw data is clean in that the latitude and longtitude measures taken at home and at work are precisely the same. This is not a good representation of the real world full of interferences; it also would not capature small movements within home or work. Therefore, a gaussian noise is added to the stationary data to account for the statistical error. Data are fuzzed according to a given standard deviation.
 
 ## Algorithms
-In the process of developing an algorithm for this problem, multiple algorithm has been considered and experienced with.
+In the process of developing an algorithm for this problem, multiple algorithm has been considered and experimented with.
 1. Create windows of location coordinates so that fuzzed data can be capture and the mean could be the location. This algorithm fails when there is high fuzzing and locations just exceeds the limits of the windows. <br />
 2. Detect entering/leaving home and work can also be challenging because there could also be motion state error during the event.<br />
 3. K-Means Clustering can solve the problem of statistical noise being too big. Experimenting this algorithm with the stationary data, I find that an increase in number of clusters can lead to more accurate predictions. Yet, this method is too sensitive of outlier that can be found in fuzzed data.<br />
