@@ -34,7 +34,7 @@ In the process of developing an algorithm for this problem, multiple algorithm h
 2. Detect entering/leaving home and work can also be challenging because there could also be motion state error during the event.<br />
 3. K-Means Clustering can solve the problem of statistical noise being too big. Experimenting this algorithm with the stationary data, I find that an increase in number of clusters can lead to more accurate predictions. Yet, this method is too sensitive of outlier that can be found in fuzzed data.<br />
 4. Mean-shift Clustering is chosen as the final algorithm for this problem because it is more robust to outliers. With the stationary data, the highest mode is home , and the second highest mode is work.
-<br />
+
 ## Benchmark
 The benchmark for the predictions is their distance from the groud truth: Golden Gate Park and 1 Infinite Loop.
 
